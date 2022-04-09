@@ -1,0 +1,65 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+2406 (git sha1 261383d, clang  -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing ILANG frontend.
+Input filename: design.il
+
+2. Printing statistics.
+
+=== ufifo ===
+
+   Number of wires:                178
+   Number of wire bits:            378
+   Number of public wires:          38
+   Number of public wire bits:      94
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                189
+     $add                            7
+     $anyconst                       3
+     $anyseq                        18
+     $assert                        18
+     $cover                          3
+     $dff                           15
+     $eq                            21
+     $logic_and                     22
+     $logic_not                     10
+     $logic_or                       5
+     $lt                             2
+     $mem                            1
+     $mux                           56
+     $not                            1
+     $pmux                           1
+     $reduce_and                     1
+     $sub                            5
+
+3. Executing SMT2 backend.
+Creating SMT-LIBv2 representation of module ufifo.
+
+End of script. Logfile hash: 5081b3798f, CPU: user 0.00s system 0.01s, MEM: 9.98 MB peak
+Yosys 0.9+2406 (git sha1 261383d, clang  -fPIC -Os)
+Time spent: 52% 2x read_ilang (0 sec), 45% 2x write_smt2 (0 sec), ...

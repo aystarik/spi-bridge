@@ -1,0 +1,32 @@
+initial
+assume (= [$formal$ufifo.v:163$7_CHECK] false)
+assume (= [$formal$ufifo.v:163$7_EN] false)
+assume (= [$formal$ufifo.v:164$8_CHECK] false)
+assume (= [bypass_data] #b00000000)
+assume (= [cvr_filled] false)
+assume (= [f_state] #b00)
+assume (= [fifo_data] #b00000000)
+assume (= [o_empty] #b11)
+assume (= [o_used] #b00)
+assume (= [rd_addr] #b00)
+assume (= [rd_addr_next] #b01)
+assume (= [use_bypass] false)
+assume (= [will_overflow] false)
+assume (= [will_underflow] true)
+assume (= [wr_addr] #b00)
+assume (= (select [fifo] #b01) #b00000000)
+assume (= (select [fifo] #b00) #b00000000)
+
+state 0
+assume (= [i_clk] false)
+assume (= [i_data] #b00000000)
+assume (= [i_rd] false)
+assume (= [i_reset] false)
+assume (= [i_wr] true)
+
+state 1
+assume (= [i_clk] false)
+assume (= [i_data] #b00000000)
+assume (= [i_rd] false)
+assume (= [i_reset] false)
+assume (= [i_wr] false)

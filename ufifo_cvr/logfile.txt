@@ -1,0 +1,41 @@
+SBY 20:41:24 [ufifo_prf] Removing directory 'ufifo_prf'.
+SBY 20:41:24 [ufifo_cvr] Removing directory 'ufifo_cvr'.
+SBY 20:41:24 [ufifo_cvr] Copy 'ufifo.v' to 'ufifo_cvr/src/ufifo.v'.
+SBY 20:41:24 [ufifo_cvr] engine_0: smtbmc
+SBY 20:41:24 [ufifo_cvr] base: starting process "cd ufifo_cvr/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 20:41:24 [ufifo_cvr] base: finished (returncode=0)
+SBY 20:41:24 [ufifo_cvr] smt2: starting process "cd ufifo_cvr/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 20:41:24 [ufifo_cvr] smt2: finished (returncode=0)
+SBY 20:41:24 [ufifo_cvr] engine_0: starting process "cd ufifo_cvr; yosys-smtbmc --presat --unroll -c --noprogress -t 32 --append 0 --dump-vcd engine_0/trace%.vcd --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Solver: yices
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Reached cover statement at ufifo.v:247.13-248.25 in step 1.
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Reached cover statement at ufifo.v:251.13-252.15 in step 3.
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 6..
+SBY 20:41:24 [ufifo_cvr] engine_0: ##   0:00:00  Reached cover statement at ufifo.v:261.13-262.38 in step 6.
+SBY 20:41:25 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 20:41:25 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 20:41:25 [ufifo_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 20:41:25 [ufifo_cvr] engine_0: ##   0:00:00  Status: passed
+SBY 20:41:25 [ufifo_cvr] engine_0: finished (returncode=0)
+SBY 20:41:25 [ufifo_cvr] engine_0: Status returned by engine: pass
+SBY 20:41:25 [ufifo_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:41:25 [ufifo_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 20:41:25 [ufifo_cvr] summary: engine_0 (smtbmc) returned pass
+SBY 20:41:25 [ufifo_cvr] summary: trace: ufifo_cvr/engine_0/trace0.vcd
+SBY 20:41:25 [ufifo_cvr] summary: trace: ufifo_cvr/engine_0/trace1.vcd
+SBY 20:41:25 [ufifo_cvr] summary: trace: ufifo_cvr/engine_0/trace2.vcd
+SBY 20:41:25 [ufifo_cvr] DONE (PASS, rc=0)

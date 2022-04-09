@@ -1,0 +1,14 @@
+# running in ufifo_cvr/src/
+read -formal -D UFIFO ufifo.v
+prep -top ufifo
+
+memory_nordff
+async2sync
+chformal -assume -early
+chformal -live -fair -remove
+opt_clean
+setundef -anyseq
+opt -keepdc -fast
+check
+hierarchy -simcheck
+write_ilang ../model/design.il
